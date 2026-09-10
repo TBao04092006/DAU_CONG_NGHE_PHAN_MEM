@@ -399,7 +399,7 @@ class ReaderController extends Controller
                     'description' => "Gia hạn thẻ thư viện thường niên 1 năm (Mã thẻ: {$user->card_number})",
                     'status' => 'completed'
                 ]);
-            }
+            }`
         } catch (\Throwable $txEx) {}
 
         return back()->with('success', "Gia hạn thẻ thư viện thành công! Hạn dùng mới đến " . Carbon::parse($user->card_expiry_date)->format('d/m/Y'));
